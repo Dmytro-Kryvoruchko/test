@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goit-markup-hw-02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/main.min.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-container">
+        <nav class="header-nav">
+          <a class="logo link-line" href="index.html"><span class="logo__span">Web</span>Studio</a>
+          <ul class="menu list-no-style">
+            <li class="menu__item">
+              <a class="menu__link link-line" href="index.html">Studio</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link-line current" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link-line" href="index.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="mobile-menu-open" type="button" data-menu-open>
+          <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+
+        <ul class="contacts link-line">
+          <li class="contacts__item">
+            <a class="contacts__link link-line" href="mailto:info@example.com"
+              >info@devstudio.com
+              <svg class="link__icon-mail" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contacts__item">
+            <a class="contacts__link link-line" href="tel:+380991111111"
+              >+38 099 111 11 11
+              <svg class="link__icon-smartphone" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+
+          <ul class="list-no-style mobile-menu__bar">
+            <li class="bar__item">
+              <a href="index.html" class="bar__link link-line current">Studio</a>
+            </li>
+            <li class="bar__item">
+              <a href="./portfolio.html" class="bar__link link-line">Portfolio</a>
+            </li>
+            <li class="link-line bar__item">
+              <a href="index.html" class="bar__link link-line">Contacts</a>
+            </li>
+          </ul>
+          <div class="mobile-contacts__wrapper">
+            <ul class="mobile-contacts list-no-style">
+              <li class="mobile-contacts__item">
+                <a class="mobile-contacts__link-tel link-line" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+
+              <li class="mobile-contacts__item">
+                <a class="mobile-contacts__link-email link-line" href="mailto:info@example.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="list-no-style mobile-smm">
+              <li class="mobile-smm__item">
+                <a href="https://www.instagram.com" class="mobile-smm__link link-line">Instagram</a>
+              </li>
+              <li class="mobile-smm__item">
+                <a href="https://www.twitter.com" class="mobile-smm__link link-line">Twitter</a>
+              </li>
+              <li class="mobile-smm__item">
+                <a href="https://www.facebook.com" class="mobile-smm__link link-line">Facebook</a>
+              </li>
+              <li class="mobile-smm__item">
+                <a href="https://www.linkedin.com" class="mobile-smm__link link-line">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="visually-hidden">Portfolio</h1>
+
+          <ul class="portfolio-filter list-no-style">
+            <li class="filter-menu">
+              <button class="filter-btn" type="button">All</button>
+            </li>
+            <li class="filter-menu">
+              <button class="filter-btn" type="button">Web-sites</button>
+            </li>
+            <li class="filter-menu">
+              <button class="filter-btn" type="button">Apps</button>
+            </li>
+            <li class="filter-menu">
+              <button class="filter-btn" type="button">Design</button>
+            </li>
+            <li class="filter-menu">
+              <button class="filter-btn" type="button">Marketing</button>
+            </li>
+          </ul>
+
+          <ul class="portfolio-catalog list-no-style">
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/tech-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/tech-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/tech-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/tech-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/tech-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/tech-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/tech.jpg"
+                      alt="a notebook with three people's profiles on the screen"
+                    />
+                  </picture>
+
+                  <p class="overlay">
+                    Technoduck is a state-of-the-art coronavirus distribution platform. Companies
+                    use this platform for digital espionage and attacks on competitors' secure
+                    servers.
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Technoduck</h2>
+                  <p class="samples-desc">Web-site</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/poster-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/poster-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/poster-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/poster-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/poster-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/poster-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/poster.jpg"
+                      alt="two basketball players having a game"
+                    />
+                  </picture>
+
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Poster New Orlean vs Golden Star</h2>
+                  <p class="samples-desc">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/seafood-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/seafood-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/seafood-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/seafood-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/seafood-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/seafood-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/seafood.jpg"
+                      alt="the seafood restaurant logo"
+                    />
+                  </picture>
+
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Seafood Restaurant</h2>
+                  <p class="samples-desc">Apps</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/headphones-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/headphones-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/headphones-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/headphones-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/headphones-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/headphones-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/headphones.jpg"
+                      alt="a headphones"
+                    />
+                  </picture>
+
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Project Prime</h2>
+                  <p class="samples-desc">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/project-box-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/project-box-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/project-box-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/project-box-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/project-box-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/project-box-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/project-box.jpg"
+                      alt="two boxes"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Project Boxes</h2>
+                  <p class="samples-desc">Apps</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/inspiration-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/inspiration-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/inspiration-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/inspiration-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/inspiration-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/inspiration-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/inspiration.jpg"
+                      alt="an Apple desktop with info on the screen"
+                    />
+                  </picture>
+
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Inspiration has no Borders</h2>
+                  <p class="samples-desc">Web-site</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/limited-edition-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/limited-edition-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/limited-edition-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/limited-edition-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/limited-edition-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/limited-edition-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/limited-edition.jpg"
+                      alt="an open brochure with creative photoes and text"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Limited Edition</h2>
+                  <p class="samples-desc">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/project-lab-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/project-lab-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/project-lab-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/project-lab-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/project-lab-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/project-lab-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/project-lab.jpg"
+                      alt="a white label with a string and printing 'Project lab'"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Project LAB</h2>
+                  <p class="samples-desc">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-card">
+              <a class="portfolio-card-link link-line" href=".//portfolio.html">
+                <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desk/growing-desk@1x.jpg 1x,
+                        ./images/portfolio/desk/growing-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tab/growing-tab@1x.jpg 1x,
+                        ./images/portfolio/tab/growing-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/growing-mob@1x.jpg 1x,
+                        ./images/portfolio/mob/growing-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="samples-img"
+                      src="./images/portfolio/growing.jpg"
+                      alt="a notebook with two hands on its keybord and 'growign business' sign on the screen"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dicta!
+                  </p>
+                </div>
+                <div class="portfolio-card-desc">
+                  <h2 class="samples-title">Growing Business</h2>
+                  <p class="samples-desc">Apps</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="tab-flex-container">
+          <div class="address-container">
+            <a class="logo-footer link-line" href="index.html"
+              ><span class="logo__span">Web</span>Studio</a
+            >
+
+            <address class="address">
+              <ul class="list-no-style">
+                <li class="contacts-items">
+                  <a
+                    class="address-footer-link link-line"
+                    href="https://goo.gl/maps/F33JLBxJRXzu59hU8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >695 Park Ave, New York, NY 10065, <br />
+                    United States</a
+                  >
+                </li>
+                <li class="contacts-items">
+                  <a class="contacts-footer-link link-line" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="contacts-items">
+                  <a class="contacts-footer-link link-line" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="find-us-menu">
+            <p class="find-us-title">Find us on</p>
+            <ul class="social-list-footer list-no-style">
+              <li class="team-profile__social-lists-footer">
+                <a href="" class="social-list-link-footer">
+                  <svg class="social-list-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-profile__social-lists-footer">
+                <a href="" class="social-list-link-footer">
+                  <svg class="social-list-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-profile__social-lists-footer">
+                <a href="" class="social-list-link-footer">
+                  <svg class="social-list-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-profile__social-lists-footer">
+                <a href="" class="social-list-link-footer">
+                  <svg class="social-list-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribe-footer-form">
+          <p class="subscribe-title">Subscribe to the newsletter</p>
+          <form class="subscribe-section-wrapper">
+            <input
+              type="email"
+              name="user_email"
+              placeholder="E-mail"
+              class="footer-subscribe-input required"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <button type="submit" class="subscribe-submit-btn">
+              <span class="subscribe-submit-btn-wrapper">
+                <span class="subscribe-btn"> Subscribe </span>
+                <svg class="subscribe-form-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
